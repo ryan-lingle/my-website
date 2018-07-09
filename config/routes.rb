@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users, only: [:new_user_session, :user_session, :destroy_user_session]
+  devise_for :users
   root to: 'pages#home', as: :home
   get 'thoughts', to: 'thoughts#index', as: :thoughts
   get 'projects', to: 'projects#index', as: :projects
