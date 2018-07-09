@@ -1,0 +1,10 @@
+<%= render 'shared/banner', title: 'Thoughts', subtitle: "For the ones that couldn't fit in the 280 character box" %>
+<div class="container">
+  <div class="row">
+    <% @thoughts.each do |t| %>
+      <div class="col-sm-6">
+        <%= render 'shared/thought_card', thought: t %>
+      </div>
+    <% end %>
+  </div>
+</div>

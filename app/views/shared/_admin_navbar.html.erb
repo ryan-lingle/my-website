@@ -1,0 +1,15 @@
+
+<div class="navbar-wagon">
+  <!-- Logo -->
+  <%= link_to admin_path, class: "navbar-wagon-item navbar-wagon-link" do %>
+    <h3 class='my-name'>ADMIN</h3>
+  <% end %>
+
+  <!-- Right Navigation -->
+  <div class="navbar-wagon-right hidden-xs hidden-sm">
+    <%= link_to 'Thoughts', admin_thoughts_path, class: "navbar-wagon-item navbar-wagon-link"%>
+    <%= link_to 'Projects', admin_projects_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    <%= link_to 'Books', admin_books_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    <%= link_to 'Back To Site', '/', class: "navbar-wagon-item navbar-wagon-link"  %>
+  </div>
+</div>

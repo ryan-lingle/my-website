@@ -1,0 +1,21 @@
+<div class="card-with-title">
+  <%= link_to project.website_link do %>
+    <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path project.image, crop: :fill %>');">
+      <div class="card-description">
+        <p><%= simple_format(project.description) %></p>
+      </div>
+      <div class="card-hover"></div>
+    </div>
+  <% end %>
+  <div class="card-title">
+    <h2><%= project.title %></h2>
+    <div class="icons">
+      <%= link_to project.github_link do %>
+        <i class="fab fa-github"></i>
+      <% end %>
+      <%= link_to project.website_link do %>
+        <i class="fas fa-external-link-alt"></i>
+      <% end %>
+    </div>
+  </div>
+</div>

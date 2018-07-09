@@ -1,0 +1,14 @@
+document.querySelector('#new_thought').classList.add('hidden')
+if (document.querySelector('.edit_thought')) {
+  document.querySelector('.edit_thought').classList.add('hidden');
+}
+document.querySelector('.thought-list').insertAdjacentHTML('afterend', `<div class="container">
+  <%= simple_form_for @thought do |f| %>
+    <%= f.input :title %>
+    <%= f.input :description %>
+    <%= f.input :content %>
+    <%= f.input :medium_link %>
+    <%= f.input :image %>
+    <%= f.button :submit %>
+  <% end %>
+</div>`)

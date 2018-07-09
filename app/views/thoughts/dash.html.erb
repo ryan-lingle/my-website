@@ -1,0 +1,23 @@
+<div class="text-center thought-list">
+  <h3>Thoughts</h3>
+  <ul class="unbullet">
+    <% @thoughts.each do |thought| %>
+      <li class="seperate">
+        <%= link_to thought.title, edit_thought_path(thought), remote: true %>
+        <%= link_to thought_path(thought), method: :delete, data: { confirm: 'Are you sure?' } do %>
+          <i class="fas fa-trash-alt"></i>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+<div class="container">
+  <%= simple_form_for @thought do |f| %>
+    <%= f.input :title %>
+    <%= f.input :description %>
+    <%= f.input :content %>
+    <%= f.input :medium_link %>
+    <%= f.input :image %>
+    <%= f.button :submit %>
+  <% end %>
+</div>

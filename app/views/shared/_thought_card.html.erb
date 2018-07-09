@@ -1,0 +1,25 @@
+<div class="card-with-title">
+  <%= link_to thought_path(thought) do %>
+    <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path thought.image, crop: :fill %>');">
+      <div class="card-description">
+        <p><%= simple_format(thought.description) %></p>
+      </div>
+      <div class="card-hover"></div>
+    </div>
+  <% end %>
+  <div class="card-title">
+    <h2>
+      <% if thought.title.length < 37 %>
+        <br>
+        <%= thought.title %>
+      <% else %>
+        <%= thought.title %>
+      <% end %>
+    </h2>
+    <div class="icons">
+      <%= link_to thought.medium_link do %>
+        <i class="fab fa-medium medium"></i>
+      <% end %>
+    </div>
+  </div>
+</div>

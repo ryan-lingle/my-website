@@ -1,0 +1,17 @@
+document.querySelector('#new_book').classList.add('hidden')
+if (document.querySelector('.edit_book')) {
+  document.querySelector('.edit_book').classList.add('hidden');
+}
+document.querySelector('.book-list').insertAdjacentHTML('afterend', `<div class="container">
+  <%= simple_form_for @book do |f| %>
+    <%= f.input :title %>
+    <%= f.input :author %>
+    <%= f.input :description %>
+    <%= f.input :content %>
+    <%= f.input :rating %>
+    <%= f.input :cover %>
+    <%= f.input :note_pic %>
+    <%= f.input :amazon_link %>
+    <%= f.button :submit %>
+  <% end %>
+</div>`)

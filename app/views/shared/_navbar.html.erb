@@ -1,0 +1,18 @@
+<% if user_signed_in? %>
+  <div class="navbar-admin text-right">
+    <%= link_to 'ADMIN', admin_path, class: "navbar-wagon-item navbar-wagon-link" %>
+  </div>
+<% end %>
+<div class="navbar-wagon">
+  <!-- Logo -->
+  <a href="/" class="navbar-wagon-item navbar-wagon-link">
+    <h3 class='my-name'>Ryan Lingle</h3>
+  </a>
+
+  <!-- Right Navigation -->
+  <div class="navbar-wagon-right hidden-xs hidden-sm">
+    <%= link_to 'THOUGHTS', thoughts_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    <%= link_to 'PROJECTS', projects_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    <%= link_to 'BOOKS', books_path, class: "navbar-wagon-item navbar-wagon-link" %>
+  </div>
+</div>

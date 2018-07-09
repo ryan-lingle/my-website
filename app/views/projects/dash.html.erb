@@ -1,0 +1,26 @@
+<div class="text-center project-list">
+  <h3>Projects</h3>
+  <ul class="unbullet">
+    <% @projects.each do |project| %>
+      <li class="seperate">
+        <%= link_to project.title, edit_project_path(project), remote: true %>
+        <%= link_to project_path(project), method: :delete, data: { confirm: 'Are you sure?' } do %>
+          <i class="fas fa-trash-alt"></i>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+<div class="form-section">
+  <h3 class="text-center">Add New Project</h3>
+  <div class="container">
+    <%= simple_form_for @project do |f| %>
+      <%= f.input :title %>
+      <%= f.input :description %>
+      <%= f.input :github_link %>
+      <%= f.input :website_link %>
+      <%= f.input :image %>
+      <%= f.button :submit %>
+    <% end %>
+  </div>
+</div>

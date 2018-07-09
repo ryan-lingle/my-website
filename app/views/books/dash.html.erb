@@ -1,0 +1,27 @@
+<div class="text-center book-list">
+  <h3>Books</h3>
+  <ul class="unbullet">
+    <% @books.each do |book| %>
+      <li class="seperate">
+        <%= link_to book.title, edit_book_path(book), remote: true %>
+        <%= link_to book_path(book), method: :delete, data: { confirm: 'Are you sure?' } do %>
+          <i class="fas fa-trash-alt"></i>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+<h3 class="text-center">Add New Book</h3>
+<div class="container">
+  <%= simple_form_for @book do |f| %>
+    <%= f.input :title %>
+    <%= f.input :author %>
+    <%= f.input :description %>
+    <%= f.input :content %>
+    <%= f.input :rating %>
+    <%= f.input :cover %>
+    <%= f.input :note_pic %>
+    <%= f.input :amazon_link %>
+    <%= f.button :submit %>
+  <% end %>
+</div>

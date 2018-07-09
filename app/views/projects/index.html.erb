@@ -1,0 +1,10 @@
+<%= render 'shared/banner', title: 'Projects', subtitle: '' %>
+<div class="container">
+  <div class="row">
+    <% @projects.each do |p| %>
+      <div class="col-sm-6">
+        <%= render 'shared/project_card', project: p %>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<div class="article-container text-center">
+  <%= cl_image_tag @book.cover, width: 300, class: "cover-image" %>
+  <h1 class="article-header"><%= @book.title %></h1>
+  <div class="text-left article">
+    <p><%= simple_format(@book.content) %></p>
+  </div>
+</div>

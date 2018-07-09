@@ -1,0 +1,7 @@
+<div class="article-container text-center">
+  <h1 class="article-header"><%= @thought.title %></h1>
+  <%= cl_image_tag @thought.image, width: 700, class: "article-image" %>
+  <div class="text-left article">
+    <p><%= simple_format(@thought.content) %></p>
+  </div>
+</div>

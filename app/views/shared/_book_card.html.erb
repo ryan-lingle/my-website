@@ -1,0 +1,20 @@
+<div class="book-card">
+  <div class="book-title">
+    <h3><%= book.title %>- <%= book.author%></h3>
+  </div>
+  <div class="book-description">
+    <%= book.description %>
+  </div>
+  <%= cl_image_tag book.cover, height: 250, class: "book-cover" %>
+  <div class="bottom-row">
+    <%= link_to 'Check Out The Notes', book_path(book), class: 'notes-link'  %>
+    <div class="details">
+      <div class="rating">
+        <%= book.rating %>/10
+      </div>
+      <%= link_to book.amazon_link do %>
+        <i class="fab fa-amazon"></i>
+      <% end %>
+    </div>
+  </div>
+</div>

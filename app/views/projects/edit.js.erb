@@ -1,0 +1,18 @@
+if (document.querySelector('#new_project')) {
+  document.querySelector('#new_project').classList.add('hidden');
+}
+
+if (document.querySelector('.edit_project')) {
+  document.querySelector('.edit_project').classList.add('hidden');
+}
+
+document.querySelector('.project-list').insertAdjacentHTML('afterend', `<div class="container">
+  <%= simple_form_for @project do |f| %>
+    <%= f.input :title %>
+    <%= f.input :description %>
+    <%= f.input :github_link %>
+    <%= f.input :website_link %>
+    <%= f.input :image %>
+    <%= f.button :submit %>
+  <% end %>
+</div>`)

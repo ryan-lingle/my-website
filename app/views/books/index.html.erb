@@ -1,0 +1,10 @@
+<%= render 'shared/banner', title: 'Books', subtitle: '' %>
+<div class="container">
+  <div class="row">
+    <% @books.each do |book| %>
+      <div class="col-sm-12">
+        <%= render 'shared/book_card',  book: book %>
+      </div>
+    <% end %>
+  </div>
+</div>
