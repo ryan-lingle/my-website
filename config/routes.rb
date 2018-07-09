@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users, except: :new_user_registration
+  devise_for :users, except: [ :new_user_registration, :edit_user_registration, :user_registration ]
   root to: 'pages#home', as: :home
   get 'thoughts', to: 'thoughts#index', as: :thoughts
   get 'projects', to: 'projects#index', as: :projects
